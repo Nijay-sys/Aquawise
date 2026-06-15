@@ -1,0 +1,254 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AQUAWISE - Smart Water Hub</title>
+    <style>
+        /* This is your custom CSS styling */
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f4f8; margin: 0; padding: 20px; }
+        .container { max-width: 1100px; margin: 0 auto; }
+        header { background: linear-gradient(135deg, #0076ad, #00c6ff); color: white; padding: 25px; border-radius: 12px; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .grid { display: grid; grid-template-columns: 1fr 2fr; gap: 20px; }
+        .card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.04); }
+        h2 { margin-top: 0; color: #333; }
+        input[type="number"] { width: 100%; padding: 10px; margin: 10px 0 20px 0; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-radius; }
+        button { background-color: #0076ad; color: white; border: none; padding: 12px 20px; border-radius: 6px; cursor: pointer; font-weight: bold; width: 100%; }
+        button:hover { background-color: #005c87; }
+        iframe { width: 100%; height: 650px; border: none; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.04); }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>💧 AQUAWISE Control Center</h1>
+            <p>Smart Quality Diagnostics & ML Potability Pipeline</p>
+        </header>
+
+        <div class="grid">
+            <div class="card">
+                <h2>Manual Sensor Intake</h2>
+                <form action="/submit-data" method="POST">
+                    <label>pH Level:</label>
+                    <input type="number" step="0.01" name="ph" required placeholder="e.g. 7.4">
+
+                    <label>Turbidity (NTU):</label>
+                    <input type="number" step="0.01" name="turbidity" required placeholder="e.g. 3.5">
+
+                    <label>Hardness (mg/L):</label>
+                    <input type="number" step="0.01" name="hardness" required placeholder="e.g. 180.2">
+
+                    <button type="submit">Log to MySQL Network</button>
+                </form>
+            </div>
+
+            <div>
+                <iframe src="http://localhost:8501/?embed=true"></iframe>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AQUAWISE - Smart Water Hub</title>
+    <style>
+        /* High-End Professional UI Styling */
+        body { 
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; 
+            /* Premium deep water abstract gradient background */
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            background-attachment: fixed;
+            margin: 0; 
+            padding: 40px 20px; 
+            color: #2d3748;
+        }
+        
+        .container { 
+            max-width: 1000px; 
+            margin: 0 auto; 
+        }
+        
+        header { 
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            color: white; 
+            padding: 35px 40px; 
+            border-radius: 20px; 
+            margin-bottom: 35px; 
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            text-align: center;
+        }
+        
+        header h1 { 
+            margin: 0; 
+            font-size: 2.5rem; 
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        header p { 
+            margin: 10px 0 0 0; 
+            opacity: 0.85; 
+            font-size: 1.1rem; 
+            letter-spacing: 0.5px;
+        }
+
+        /* Stacked centered card layout */
+        .layout-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 35px;
+        }
+        
+        .card { 
+            background: rgba(255, 255, 255, 0.95); 
+            padding: 35px; 
+            border-radius: 20px; 
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); 
+            border: 1px solid #e2e8f0;
+            width: 100%;
+            max-width: 500px; 
+            box-sizing: border-box;
+        }
+        
+        .card h2 { 
+            margin-top: 0; 
+            margin-bottom: 25px;
+            color: #1a365d; 
+            font-size: 1.5rem;
+            text-align: center;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 12px;
+        }
+        
+        .form-group {
+            margin-bottom: 22px;
+        }
+        
+        label { 
+            display: block;
+            margin-bottom: 8px; 
+            font-weight: 600; 
+            color: #4a5568;
+            font-size: 0.95rem;
+        }
+        
+        input[type="number"] { 
+            width: 100%; 
+            padding: 14px; 
+            border: 1px solid #cbd5e0; 
+            border-radius: 10px; 
+            box-sizing: border-box; 
+            font-size: 1rem;
+            transition: all 0.2s;
+            background-color: #f8fafc;
+        }
+        
+        input[type="number"]:focus {
+            outline: none;
+            border-color: #3182ce;
+            background-color: #fff;
+            box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.25);
+        }
+        
+        button { 
+            background: linear-gradient(135deg, #3182ce, #2b6cb0);
+            color: white; 
+            border: none; 
+            padding: 16px 20px; 
+            border-radius: 10px; 
+            cursor: pointer; 
+            font-weight: 600; 
+            font-size: 1.05rem;
+            width: 100%; 
+            transition: all 0.2s;
+            margin-top: 10px;
+            box-shadow: 0 4px 12px rgba(49, 130, 206, 0.3);
+        }
+        
+        button:hover { 
+            background: linear-gradient(135deg, #2b6cb0, #2c5282);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 15px rgba(49, 130, 206, 0.4);
+        }
+        
+        button:active {
+            transform: translateY(1px);
+        }
+        
+        /* Centered Wide Dashboard Wrapper */
+        .dashboard-wrapper {
+            background: white;
+            border-radius: 20px;
+            padding: 12px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+            border: 1px solid #e2e8f0;
+            width: 100%;
+            height: 700px;
+            box-sizing: border-box;
+        }
+        
+        iframe { 
+            width: 100%; 
+            height: 100%; 
+            border: none; 
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>💧 AQUAWISE Control Center</h1>
+            <p>Smart Quality Diagnostics & ML Potability Pipeline</p>
+        </header>
+
+        <div class="layout-wrapper">
+            <div class="card">
+                <h2>Manual Sensor Intake</h2>
+                <form action="/submit-data" method="POST">
+                    <div class="form-group">
+                        <label>pH Level</label>
+                        <input type="number" step="0.01" name="ph" required placeholder="e.g. 7.40">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Turbidity (NTU)</label>
+                        <input type="number" step="0.01" name="turbidity" required placeholder="e.g. 3.50">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>Hardness (mg/L)</label>
+                        <input type="number" step="0.01" name="hardness" required placeholder="e.g. 180.20">
+                    </div>
+
+                    <button type="submit">Log to Aquawise Network</button>
+                </form>
+            </div>
+
+            <div class="dashboard-wrapper">
+                <iframe src="http://localhost:8501/?embed=true"></iframe>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
